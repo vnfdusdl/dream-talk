@@ -1,0 +1,14 @@
+:root {
+    --main-color: #eeeeee;
+    --sub-color: ;
+    --highlight-color: #d7ccc8;
+    --sub-font-color: rgba(0,0,0,0.6);
+    --highlight-font-color: #ff3d00;
+    --pink: #f9bbd0;
+    --horizontal-space: 20px;
+    --main-gradient: linear-gradient( 135deg, #EECE13 10%, #B210FF 100%);
+    --main-gradient:linear-gradient(180deg, rgba(246,93,129,1) 29%, rgba(250,189,104,1) 77%);
+    --sub-gradient:linear-gradient(50deg, rgba(246,93,129,0.7) 29%, rgba(250,189,104,0.7) 77%);
+    --border-gradient: linear-gradient(270deg, rgba(246,93,129,1) 29%, rgba(250,189,104,1) 77%)
+
+}

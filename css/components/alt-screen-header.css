@@ -1,0 +1,27 @@
+.alt-screen-header {
+    background-color: white;
+}
+
+.alt-screen-header__column {
+    width: 33%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.alt-screen-header__column:nth-child(2) {
+    font-size: 22px;
+    justify-content: center;
+}
+
+.alt-screen-header__column:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alt-screen-header__column:not(.alt-screen-header__not-gradient) {
+    background-image: var(--main-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+
+}

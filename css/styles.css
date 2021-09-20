@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;400;600;700&display=swap');
+@import "reset.css";
+@import "variables.css";
+
+/*components*/
+@import "components/status-bar.css";
+@import "components/nav_bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/alt-screen-header.css";
+@import "components/big-screen.css";
+
+/*screens*/
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/search-1.css";
+@import "screens/search-2.css";
+@import "screens/more.css";
+@import "screens/setting.css";
+@import "screens/chat-window-screen.css";
+@import "screens/music.css";
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+
+body::-webkit-scrollbar-thumb {
+background-image: var(--sub-gradient);
+border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: whtie;
+}
+
+.badge {
+  background-color: #ff1744;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+}
+
+/*nav__bar notification도 badge이기 때문에 그냥 .badge 하면 안됨*/
+.main-screen .badge {
+  will-change: transform;
+  animation:  BadgeAnim 1s  linear infinite;
+}
+
+@keyframes BadgeAnim {
+  from {
+    transform: none;
+  }
+  to{
+    transform: scale(1.2);
+  }
+}

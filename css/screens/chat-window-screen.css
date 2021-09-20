@@ -1,0 +1,231 @@
+#chat-window, #chat-window .status-bar, #chat-window .screen-header {
+    background-color: white;
+}
+
+
+#chat-window{
+    height: 100vh;
+}
+
+#chat-window .alt-screen-header__column:last-child i {
+    margin-left: 20px;
+}
+
+.chat-window-screen {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-window__date {
+    background: linear-gradient(50deg, rgba(246,93,129,0.7) 29%, rgba(250,189,104,0.7) 77%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.chat-message {
+    width: 100%;
+    /*width를 주지않으면 컨텐츠 크기만큼만 적용되서 flex박스에 끌려다니는데, width를 100%주면 화면 폭만큼의 크기를 갖고 그 내부 자식들은 직접적인 영향을 받지 않아 좌측에 정렬됨*/
+    display: flex;
+    margin-top: 30px;
+
+}
+
+/*여기도 이거 없으면 마지막 말풍선이 채팅창에 가려서 안 보임..하;;;;;*/
+.chat-message__last {
+    padding-bottom: 50px;
+}
+
+.chat-message__iamge {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    margin-right: 10px;
+}
+
+.chat-message__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message__name {
+    opacity: 0.8;
+    margin-left: 8px;
+    margin-bottom: 6px;
+}
+
+.chat-message__content {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 5px;
+}
+
+.chat-message__text {
+    background-color: rgba(246,93,129,0.7);
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+.chat-message__time {
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+
+.chat-message--send {
+    justify-content: flex-end;
+}
+
+.chat-message--send .chat-message__content {
+    flex-direction: row-reverse;
+}
+
+.chat-message--send .chat-message__text {
+    margin-right: 0px;
+    margin-left: 5px;
+    background-color: rgba(250,189,104,0.7);
+}
+
+
+.input-text {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    padding: 5px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0px;
+}
+
+.input-text__column:first-child {
+    width: 5%;
+}
+
+.input-text__column:last-child {
+    width: 95%;
+    position: relative;
+    margin-left: 5px;
+}
+
+.input-text__column input {
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    border: 1px solid var(--sub-font-color);
+    outline: none;
+    padding-left: 15px;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+
+
+.input-text__column:last-child .fa-smile-wink,
+.input-text__column:last-child button {
+    position: absolute;
+}
+
+.input-text__column .fa-smile-wink {
+    right: 38px;
+    top:10.5px;
+}
+
+.input-text__column button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    right: 7px;
+    top:5px;
+    padding: 2px;
+    background-color: rgba(250,189,104,0.7);
+}
+
+
+
+
+
+
+
+/*톡방 말풍선 애니매이션..여기 못해먹겠다... 하다하다 안돼서 그냥 각각 class 추가함 ㅠ*/
+
+@keyframes ChatPopup{
+    from {
+        opacity: 0;
+        
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.chat-message__content--1 , .chat-message__content--2, .chat-message__content--3 ,.chat-message__content--4 ,.chat-message__content--5 ,.chat-message__content--6, .chat-message__content--7, .chat-message__content--8
+{
+    opacity: 0;
+    animation: ChatPopup 0.3s linear forwards;
+}
+
+
+.chat-message__content--2 {
+
+    animation-delay: 1s;
+}
+
+.chat-message__content--3 {
+    animation-delay: 2s;
+}
+
+.chat-message__content--4 {
+    animation-delay: 2.5s;
+}
+
+.chat-message__content--5 {
+    animation-delay: 3.5s;
+}
+
+.chat-message__content--6 {
+    animation-delay: 4.2s;
+}
+
+.chat-message__content--7 {
+    animation-delay: 5s;
+}
+
+.chat-message__content--8 {
+    animation-delay: 6s;
+}
+
+
+/*채팅창 input 부분 animation*/
+
+.input-text.input-text__column:first-child,
+.input-texti,
+.input-text button {
+    transition: all 0.2s ease-in-out;
+}
+
+
+.input-text input {
+    transition: all 0.4s ease-in-out;
+}
+
+.input-text:focus-within .input-text__column:first-child,
+.input-text:focus-within i,
+.input-text:focus-within  button {
+    opacity: 0;
+}
+
+.input-text:focus-within input {
+    width: 95vw;
+    transform: translateX(-10%);
+}
+
+.input-text:focus-within .input-text{
+    transform: translateY(50px);
+}

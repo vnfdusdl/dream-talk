@@ -1,0 +1,61 @@
+
+.friends-list {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0,0,0,0.5);
+    margin-top:20px;
+    /* 밑에는 border gradient 넣은 거.. */
+    border-top: 1px  solid;
+    border-image: var(--border-gradient) 1;
+}
+
+.friends-list span {
+    font-size: 20px;
+}
+
+
+
+
+/*splash scree 애니매이션 start*/
+
+@keyframes SplashScreen {
+    from{
+    opacity: 1;
+    }
+    to{
+    opacity: 0;
+    visibility: hidden;
+    }
+}
+
+@keyframes SplashScreen-Loading {
+
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.splash-screen {
+    height: 100vh;
+    width: 100vw;
+    /*friends 화면에 스크롤이 있어서 splash screen이 화면에 꽉차지 않았었는데, position:fixed 해서 스크롤 해도 유지되게 함!!!! */
+    position: fixed;
+    top:0;
+    background-color: white;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: SplashScreen 0.1s linear forwards;
+    animation-delay: 1.5s;
+    font-size: 60px;
+    color: rgba(246,93,129,1);
+}
+
+.splash-screen .fa-spinner {
+    animation: SplashScreen-Loading 1.5s linear infinite;
+}

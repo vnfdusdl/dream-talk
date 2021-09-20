@@ -1,0 +1,190 @@
+
+.user-component {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding: 5px 10px; 
+    margin-top: 125px;
+    box-sizing: border-box;
+}
+
+
+.user-component-friend {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.user-component:hover {
+    box-shadow: 0px 0px 15px var(--pink);
+    border-radius: 10px;
+}
+
+
+/*친구장에서 마지막 component bottom padding*/
+.user-component__last {
+    margin-bottom:50px;
+}
+
+/*margin-collapse 현상 때문인지 bottom margin이 안 먹혀서 아무 div 만들고 padding값 준 거.....*/
+.idontknow {
+    padding:10px
+}
+
+/*대화창에서 마지막 component bottom margin*/
+#mark-chat .user-component-friend {
+    margin-bottom: 60px;
+}
+
+
+.user-component__column {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-component__column:first-child {
+    width: 55%;
+}
+
+.user-component__column:last-child {
+    width: 45%;
+} 
+
+.user-component__column-friend {
+    display: flex;
+    align-items: center;
+}
+
+.user-component__avatar {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+    position: relative;
+    border-radius: 50%;
+}
+
+
+.user-component__avatar-lg {
+    width: 80px;
+    height: 80px;
+    margin-right: 25px;
+    left: 4px;
+}
+
+
+.user-component__avatar-sm {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    left: 4px;
+    bottom: 2px;
+}
+
+.user-component__id {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-component__name {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.user-component__name--sm {
+    font-size: 18px
+}
+
+
+
+.user-component__title {
+    display: flex;
+    align-items: center;
+}
+
+/*단체톡방에 인원숫자*/
+.user-component__number {
+    margin-left: 5px;
+    color: var(--sub-font-color);
+    font-size: 14px;
+}
+
+.user-component__text {
+    font-size: 14px;
+    color: var(--sub-font-color);
+    line-height: 18px;
+}
+
+.user-component__text--sm{
+    font-size : 14px;
+    line-height: 16px;
+    color: var(--sub-font-color);
+    line-height: 18px;
+}
+
+.user-component__music {
+    border: solid 1px var(--main-color);
+    padding: 8px 8px;
+    border-radius: 15px;
+    color: var(--sub-font-color);
+
+}
+
+.user-component__music-title {
+    font-size: 12px;
+}
+
+.user-component__music-title i {
+    margin-left: 5px;
+}
+
+.user-component__column:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.user-component__time { 
+    margin: 10px 0px;
+}
+
+.fa-play-circle,.fa-chevron-up {
+    cursor: pointer;
+} 
+
+
+
+
+/* 프로필 animation*/
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.gradation__animate {
+     background-image: var(--main-gradient);
+     width: 88px;
+     height: 88px;
+     border-radius: 50%;
+     position: absolute;
+     animation: spin 2s infinite linear;
+}
+
+.gradation__animate--small {
+    width: 68px;
+    height: 68px;
+    top: 9px;
+    left:0px;
+}
+

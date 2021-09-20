@@ -1,0 +1,37 @@
+.big-screen {
+    display: none;
+}
+
+@media screen and (min-width: 580px) {
+    .big-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /*scroll해도 유지되도록 fixed*/
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        color: var(--pink);
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 50px;
+        z-index: 4;
+        animation: big-screenAnim 1s linear infinite;
+    }
+}
+
+@keyframes big-screenAnim {
+    0% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: none;
+    }
+}
