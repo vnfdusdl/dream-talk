@@ -223,7 +223,7 @@
 
 .input-text:focus-within input {
     width: 95vw;
-    transform: translateX(-10%);
+    transform: translateX(-9%);
 }
 
 .input-text:focus-within .input-text{

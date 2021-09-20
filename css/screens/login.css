@@ -35,11 +35,16 @@
   font-size: 16px;
 }
 
+.welcome-header__text {
+  text-align: center;
+  color: var(--pink)
+}
+
 .login-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0px 40px;
+  margin: 0px 40px 40px;
 }
 
 .login-form input {
